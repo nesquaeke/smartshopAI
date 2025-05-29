@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Filter, Search, Grid, List } from 'lucide-react'
 import { categories, sampleProducts } from '@/data/products'
+import { useCart, useFavorites } from '@/contexts/AppContext'
 
 export default function CategoryPage() {
   const params = useParams()

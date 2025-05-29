@@ -36,6 +36,8 @@ jobs:
       - name: Build Next.js app
         run: |
           cd src/frontend
+          # Enable static export for production
+          sed -i 's|// output: '\''export'\''|output: '\''export'\''|g' next.config.js
           npm run build
           
       - name: Setup Pages
